@@ -1,9 +1,9 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { Phone, Clock, Mail, MapPin } from 'lucide-react';
 import styles from './Contact.module.css';
 
 const contactInfo = [
-  { icon: MapPin, title: 'Address', content: 'Unit 5, Industrial Park, Quezon City, Metro Manila, Philippines' },
+  { icon: MapPin, title: 'Address', content: 'Kens Trading\nDumaguete City, Negros Oriental\nPhilippines' },
   { icon: Phone, title: 'Phone', content: '+63 917 123 4567' },
   { icon: Clock, title: 'Business Hours', content: 'Mon-Sat: 8AM - 6PM\nSunday: Closed' },
   { icon: Mail, title: 'Email', content: 'info@kensgarage.ph' },
@@ -27,11 +27,17 @@ export default function Contact() {
           ))}
         </div>
         <div className={styles.mapBox}>
-          <div className={styles.mapInner}>
-            <MapPin className={styles.mapIcon} />
-            <p className={styles.mapText}>Google Maps Location</p>
-            <p className={styles.mapSub}>Unit 5, Industrial Park, Quezon City</p>
-          </div>
+          <iframe
+            className={styles.mapIframe}
+            title="Ken's Garage Location"
+            src="https://maps.google.com/maps?q=9.3326439,123.2939557&t=&z=17&ie=UTF8&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </div>

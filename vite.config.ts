@@ -3,9 +3,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
+// Use the GitHub Pages sub-path only when building on GitHub Actions.
+// Vercel and local dev both get '/' so assets/routes resolve correctly.
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
 export default defineConfig({
-  // IMPORTANT: must match your GitHub repo name exactly
-  base: '/Kens-Garage-Website/',
+  base: isGitHubPages ? '/Kens-Garage-Website/' : '/',
   plugins: [react()],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

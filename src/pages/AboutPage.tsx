@@ -8,7 +8,7 @@ import styles from './AboutPage.module.css';
 import whyKensBg from '../assets/whykens-bg.jpg';
 
 const milestones = [
-  { year: '2005', title: 'Founded', description: 'Ken opens his first garage in Quezon City' },
+  { year: '2005', title: 'Founded', description: 'Ken opens his first garage in Dumaguete, Negros Oriental' },
   { year: '2010', title: '500th Build', description: 'Reached half-thousand custom builds milestone' },
   { year: '2015', title: 'Expansion', description: 'Moved to larger facility to meet demand' },
   { year: '2020', title: '1000+ Builds', description: 'Celebrated over 1000 completed projects' },
@@ -62,7 +62,7 @@ export default function AboutPage() {
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <h2 className={styles.storyTitle}>The Ken's Story</h2>
                 <div className={styles.storyText}>
-                  <p>What started as a small one-bay garage in Quezon City has grown into the Philippines' most trusted 4WD customization shop. Ken Rodriguez opened his doors in 2005 with a simple mission: build vehicles that can handle anything the Philippine terrain throws at them.</p>
+                  <p>What started as a small one-bay garage in Dumaguete City has grown into the Philippines' most trusted 4WD customization shop. Ken Rodriguez opened his doors in 2005 with a simple mission: build vehicles that can handle anything the Philippine terrain throws at them.</p>
                   <p>With over two decades of experience and thousands of successful builds, Ken's Garage has become synonymous with quality, reliability, and innovation in the 4WD community. We're not just mechanics — we're enthusiasts who live and breathe off-road culture.</p>
                   <p>Today, we're proud to be a family-run business serving families. Every vehicle that leaves our shop carries our reputation, and we take that responsibility seriously.</p>
                 </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
               <div className={styles.shopCard}>
                 <MapPin className={styles.shopIcon} />
                 <h3 className={styles.shopCardTitle}>Location</h3>
-                <p className={styles.shopCardText}>Unit 5, Industrial Park<br />Quezon City, Metro Manila<br />Philippines</p>
+                <p className={styles.shopCardText}>Kens Trading<br />Dumaguete City, Negros Oriental<br />Philippines</p>
               </div>
               <div className={styles.shopCard}>
                 <Clock className={styles.shopIcon} />
