@@ -1,0 +1,25 @@
+Build a professional, single-page website for "Ken's Garage", a family-owned 4WD vehicle customization shop based in the Philippines. The site's primary goal is lead generation (quote requests).
+Design System: Dark & rugged aesthetic. Color palette: near-black #080808 background, charcoal #161616 cards, burnt orange #FF6200 as the primary accent. Typography: Barlow Condensed (900 weight) for display headings, Barlow (300–600) for body. Add a subtle grid overlay, noise texture, and orange glow radial gradients to create atmosphere. All CTA buttons should use an angular clip-path (parallelogram/hexagon style) instead of rounded corners.
+Sections (in order):
+
+Sticky Navigation — Logo (placeholder hex badge "KG" + wordmark "Ken's Garage" with "4WD Specialists · Philippines" subtext), nav links (Services, Builds, Reviews, Contact), and a high-contrast "Get a Quote" CTA button. Collapses to hamburger on mobile.
+Hero Section — Full-viewport dark background with grid overlay and rotating gear SVG decoration. Badge reading "Family Owned & Operated Since 2005". Large stacked headline: "Build Your / BEAST. / Drive Legend." (second line in orange, third as outlined ghost text). Subheading mentioning 4WD customization in the Philippines. Two CTAs: "Get a Free Quote" (primary) and "View Our Builds" (ghost). Bottom-right stats: 500+ Builds, 19 Yrs Experience, 98% Satisfaction. Animated scroll indicator bottom-left.
+Trust Bar — Full-width dark strip with 5 icon+text trust signals: Family Owned (Est. 2005), Expert Technicians, Warranty Backed, Proudly Filipino, Fast Turnaround.
+Services Section (3 cards):
+
+🏔️ Lift Kits & Suspension — body lifts, coilovers, leaf springs, shocks, alignment
+⚙️ Wheels & Tires — all-terrain/mud tires, beadlocks, custom fitment, fender flares
+🔩 Engine Upgrades & Tuning — ECU remap, cold air intake, exhaust, turbo, performance chips
+Each card has a large ghost number (01/02/03), icon, name, description, bullet list, and "Get a Quote →" link. Hover lifts card and reveals orange gradient overlay.
+
+
+Why Ken's Garage — Two-column layout. Left: tall image placeholder with decorative hexagon accent. Right: section heading "The Ken's Difference" + 3 feature rows (Family-Owned Since 2005, Purpose-Built Customization, Workmanship Guarantee), each with emoji icon, bold title, and description. Hover slides each feature row to the right with an orange left border.
+Featured Builds Gallery — Filter buttons (All / Lift Kits / Wheels / Engine). 3-column CSS grid where the first item spans 2 columns. Each cell is an image placeholder with a dark gradient overlay on hover revealing the build name and category tag. Placeholder cells use inline SVG icons.
+Testimonials (3 cards) — Large decorative quotation mark, italic review text, 5-star rating in orange, customer name, and vehicle/build type. Cards have a top orange border on hover.
+Get a Free Quote Form — Two-column layout: left side has section heading + 5 trust cues (e.g. "Free consultation", "Response within 24 hours"). Right side is a dark card form with orange top accent bar. Fields: First Name, Last Name, Phone (PH format), Email, Vehicle Make, Vehicle Model, Year, Service Interested In (dropdown: Lift Kit, Wheels & Tires, Engine Upgrade, Multiple Services), Message. Submit button full-width with angular clip-path.
+Contact Info Bar — 4 cards: 📍 Address (single PH location placeholder), 📞 Phone (PH format +63), 🕐 Business Hours (Mon–Sat 8AM–6PM, Sun Closed), 📧 Email. Below: embedded Google Map placeholder div.
+Footer — Three columns: (1) Brand logo + short about blurb + Facebook & Instagram icon buttons; (2) Quick Links nav list; (3) Business Hours table. Bottom bar: copyright with orange-accented shop name + tagline "Built Tough. Built Right."
+
+Floating CTA — Fixed bottom-right "Get a Quote" button that appears after scrolling 300px, with orange glow box-shadow.
+JavaScript behaviors: Navbar shrinks + gains orange border on scroll. Hamburger toggles full-screen mobile menu. Gallery filter buttons show/hide cards by data-cat attribute. Floating CTA fades in/out based on scroll position. Form submission shows a success alert.
+Responsive: Full single-column stacking on mobile. Services, testimonials, contact cards go 1-column. Gallery goes 1-column. Nav collapses to hamburger.
