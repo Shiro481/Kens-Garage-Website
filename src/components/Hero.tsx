@@ -15,7 +15,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        {/* Watermark cover — bottom-right */}
         <div className="absolute bottom-0 right-0 w-1/2 h-1/4 bg-gradient-to-tl from-black via-black/90 to-transparent" />
       </div>
 
@@ -25,47 +24,44 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center text-center lg:items-start lg:text-left"
+          className="w-full"
         >
-          {/* Badge */}
-          <div className="inline-block border border-white/40 px-4 py-2 mb-6">
-            <span className="text-white/80 text-xs sm:text-sm font-['Bebas_Neue'] tracking-[0.2em]">
+          {/* Badge — centered on mobile/tablet, left on desktop */}
+          <div className="mb-6 text-center lg:text-left">
+            <span className="inline-block border border-white/40 px-4 py-2 text-white/80 text-xs sm:text-sm font-['Bebas_Neue'] tracking-[0.2em]">
               FAMILY OWNED & OPERATED SINCE 2005
             </span>
           </div>
 
-          {/* Main Headline — huge on all screens */}
-          <h1 className="font-['Bebas_Neue'] tracking-wider mb-4 sm:mb-6 w-full">
-            <span
-              className="block text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] leading-none"
-              style={{ fontSize: 'clamp(4.5rem, 18vw, 10rem)' }}
-            >
+          {/* Main Headline */}
+          <h1
+            className="font-['Bebas_Neue'] tracking-wider mb-4 sm:mb-6 leading-none text-center lg:text-left"
+            style={{ fontSize: 'clamp(4rem, 14vw, 9rem)' }}
+          >
+            <span className="block text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
               BUILD YOUR
             </span>
-            <span
-              className="block text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] leading-none"
-              style={{ fontSize: 'clamp(4.5rem, 18vw, 10rem)' }}
-            >
+            <span className="block text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
               BEAST.
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-md sm:max-w-lg leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed text-center lg:text-left max-w-lg mx-auto lg:mx-0">
             Premier 4WD customization &amp; performance specialists in the Philippines.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start">
             <a
               href="#quote"
-              className="btn-angular bg-white text-black px-8 py-4 text-lg font-['Bebas_Neue'] tracking-widest hover:bg-neutral-200 transition-colors text-center"
+              className="btn-angular bg-white text-black px-8 py-4 text-lg font-['Bebas_Neue'] tracking-widest hover:bg-neutral-200 transition-colors text-center w-full sm:w-auto"
             >
               Get a Free Quote
             </a>
             <a
               href="#builds"
-              className="btn-angular border border-white/40 text-white px-8 py-4 text-lg font-['Bebas_Neue'] tracking-widest hover:bg-white hover:text-black transition-colors text-center"
+              className="btn-angular border border-white/40 text-white px-8 py-4 text-lg font-['Bebas_Neue'] tracking-widest hover:bg-white hover:text-black transition-colors text-center w-full sm:w-auto"
             >
               View Our Builds
             </a>
