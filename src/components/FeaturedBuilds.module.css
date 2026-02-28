@@ -1,0 +1,97 @@
+/* ── FeaturedBuilds ── */
+.section {
+  background: transparent;
+  padding: 64px 0 96px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.header { text-align: center; margin-bottom: 48px; }
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.divider { width: 96px; height: 4px; background: #fff; margin: 0 auto 32px; }
+/* Filter buttons */
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.filterBtn {
+  padding: 8px 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+  background: #171717;
+  color: #9ca3af;
+}
+.filterBtn:hover { background: #262626; color: #fff; }
+.filterBtnActive { background: #fff; color: #000; }
+/* Gallery Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.buildItem {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.buildItemSpan { grid-column: span 1; }
+.buildImg {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s, transform 0.5s;
+  display: block;
+}
+.buildItem:hover .buildImg { filter: grayscale(0%); transform: scale(1.05); }
+.buildOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+.buildItem:hover .buildOverlay { opacity: 0.9; }
+.buildContent {
+  position: absolute; inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: translateY(16px);
+  transition: transform 0.3s;
+}
+.buildItem:hover .buildContent { transform: translateY(0); }
+.buildCategory {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.12em;
+  border: 2px solid #fff;
+  padding: 4px 12px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+.buildName {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .buildItemSpan { grid-column: span 2; }
+}

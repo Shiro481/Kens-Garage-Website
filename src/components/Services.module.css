@@ -1,0 +1,144 @@
+/* ── Services (Home Page) ── */
+.section {
+  background: transparent;
+  padding: 64px 0 96px;
+}
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.divider {
+  width: 96px; height: 4px;
+  background: #fff;
+  margin: 0 auto 16px;
+}
+.subtitle {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+/* Card */
+.card {
+  position: relative;
+  background: #171717;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  will-change: transform;
+}
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.4);
+  box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+/* Image */
+.imageWrap {
+  position: relative;
+  height: 256px;
+  overflow: hidden;
+}
+.img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+  transform: scale(1.05);
+  display: block;
+}
+.card:hover .img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+.gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, #171717 0%, rgba(23,23,23,0.8) 40%, transparent 100%);
+}
+.ghostNum {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  color: rgba(255,255,255,0.1);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+/* Content */
+.content {
+  padding: 32px;
+  background: #171717;
+  margin-top: -1px;
+  position: relative;
+}
+.icon { width: 48px; height: 48px; color: #fff; margin-bottom: 16px; }
+.cardTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.desc { color: #9ca3af; margin-bottom: 24px; line-height: 1.6; }
+.featureList { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 8px; }
+.featureItem { display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: #d1d5db; }
+.arrow { color: #fff; margin-top: 2px; flex-shrink: 0; }
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: gap 0.3s;
+}
+.link:hover { gap: 12px; }
+
+/* See All CTA */
+.ctaWrap {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: center;
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+  padding: 16px 40px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.ctaBtn:hover { background: #fff; color: #000; }
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}

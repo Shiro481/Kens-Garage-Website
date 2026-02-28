@@ -1,32 +1,25 @@
 import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import TrustBar from './components/TrustBar';
-import Services from './components/Services';
-import WhyKens from './components/WhyKens';
-import FeaturedBuilds from './components/FeaturedBuilds';
-import Testimonials from './components/Testimonials';
-import QuoteForm from './components/QuoteForm';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import FloatingCTA from './components/FloatingCTA';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import BuildsPage from './pages/BuildsPage';
+import ContactPage from './pages/ContactPage';
+import QuotePage from './pages/QuotePage';
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <Router>
       <Toaster position="top-right" theme="dark" />
-      <Navbar />
-      <Hero />
-      <TrustBar />
-      <Services />
-      <WhyKens />
-      <FeaturedBuilds />
-      <Testimonials />
-      <QuoteForm />
-      <Contact />
-      <Footer />
-      <FloatingCTA />
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/builds" element={<BuildsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/quote" element={<QuotePage />} />
+      </Routes>
+    </Router>
   );
 }

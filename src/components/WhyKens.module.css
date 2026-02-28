@@ -1,0 +1,93 @@
+/* ── WhyKens ── */
+.section {
+  background: #171717;
+  padding: 64px 0 96px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: center;
+}
+/* Image side */
+.imageWrap { position: relative; }
+.imageInner { position: relative; overflow: hidden; }
+.img {
+  width: 100%; height: 500px;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: grayscale(100%) brightness(0.75) contrast(1.25);
+  transition: transform 0.5s;
+  display: block;
+}
+.imageInner:hover .img { transform: scale(1.05); }
+.imageOverlay {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 50%; height: 25%;
+  background: linear-gradient(to top left, #171717 0%, rgba(23,23,23,0.8) 40%, transparent 100%);
+}
+.accentCorner {
+  position: absolute;
+  bottom: -24px; right: -24px;
+  width: 96px; height: 96px;
+  border: 4px solid #fff;
+  z-index: 10;
+  display: none;
+}
+/* Content side */
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 48px;
+  line-height: 1.1;
+}
+.featureList { display: flex; flex-direction: column; gap: 0; }
+.featureItem {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  margin-left: -24px;
+  border-left: 4px solid transparent;
+  transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  border-radius: 0 12px 12px 0;
+  position: relative;
+  z-index: 10;
+}
+.featureItem:hover {
+  transform: translateX(16px);
+  border-left-color: #fff;
+  background: #000;
+}
+.iconBox {
+  width: 48px; height: 48px;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.featureIcon { width: 24px; height: 24px; color: #fff; }
+.featureTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.featureDesc { color: #9ca3af; line-height: 1.6; }
+
+@media (min-width: 768px) {
+  .accentCorner { display: block; }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

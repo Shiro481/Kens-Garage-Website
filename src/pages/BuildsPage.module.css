@@ -1,0 +1,159 @@
+/* =============================================
+   BuildsPage — Vanilla CSS Module
+   ============================================= */
+
+.page { background: #111; min-height: 100vh; color: #fff; font-family: 'Inter', sans-serif; }
+.pageInner { padding-top: 80px; }
+
+/* ── Hero ── */
+.hero { background: #000; padding: 96px 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+.heroInner { max-width: 1280px; margin: 0 auto; padding: 0 24px; text-align: center; }
+.heroTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.heroDivider { width: 96px; height: 4px; background: #fff; margin: 0 auto 32px; }
+.heroSubtitle { font-size: 1.125rem; color: #9ca3af; max-width: 768px; margin: 0 auto; line-height: 1.75; }
+
+/* ── Filter Bar ── */
+.filterBar {
+  background: #171717;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  position: sticky;
+  top: 72px;
+  z-index: 30;
+}
+.filterInner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.filterRow { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.filterBtn {
+  padding: 8px 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: #000;
+  color: #9ca3af;
+  transition: background-color 0.3s, color 0.3s;
+}
+.filterBtn:hover { background: #262626; color: #fff; }
+.filterBtnActive { background: #fff; color: #000; border-color: #fff; }
+
+/* ── Gallery ── */
+.gallery { background: #000; padding: 64px 0; }
+.galleryInner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+/* Build card */
+.buildCard {
+  position: relative;
+  height: 384px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: border-color 0.3s;
+}
+.buildCard:hover { border-color: #fff; }
+.buildCardSpan { grid-column: span 1; }
+.buildImg {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+  display: block;
+}
+.buildCard:hover .buildImg { filter: grayscale(0%); transform: scale(1.04); }
+
+/* Gradient overlay */
+.buildOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.buildCard:hover .buildOverlay { opacity: 0.95; }
+
+/* Card content */
+.buildContent {
+  position: absolute; inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.buildCategory {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  border: 2px solid #fff;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+.buildName {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.buildDesc {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  line-height: 1.5;
+}
+.buildCard:hover .buildDesc { opacity: 1; }
+.buildSpecs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+.buildCard:hover .buildSpecs { opacity: 1; }
+.specItem { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: #9ca3af; }
+.specArrow { color: #fff; flex-shrink: 0; }
+
+/* ── CTA ── */
+.cta { background: #171717; border-top: 1px solid rgba(255,255,255,0.2); }
+.ctaInner { max-width: 1280px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+.ctaTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+.ctaSubtitle { color: #9ca3af; font-size: 1.1rem; max-width: 640px; margin: 0 auto 40px; line-height: 1.7; }
+.ctaBtn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 16px 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.ctaBtn:hover { background: #e5e5e5; }
+
+/* ── Responsive ── */
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .buildCardSpan { grid-column: span 2; }
+}
